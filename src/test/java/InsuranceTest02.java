@@ -39,6 +39,8 @@ public class InsuranceTest02 {
 
         driver.get(baseUrl + "ru/person");
         //driver.findElement(By.xpath("//ul[@class='alt-menu-mid__list']/li[5]/a/span/span[1]")).click();
+        wait.until(ExpectedConditions.elementToBeClickable(
+                driver.findElement(By.xpath("//div[contains(@class,' banner-group-carousel')]"))));
         driver.findElement(By.partialLinkText("Застраховать себя")).click();
         driver.findElement(By.linkText("Страхование путешественников")).click();
         assertEquals("Страхование путешественников", driver.findElement(By.cssSelector(".sbrf-rich-outer>h1")).getText());

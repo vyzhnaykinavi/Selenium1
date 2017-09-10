@@ -46,7 +46,7 @@ public class InsuranceTest01 {
     wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//li[@class='social__item']"))));
 
     WebElement webElem = driver.findElement(By.xpath("//li[@class='social__item']"));
-    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: \"end\", behavior: \"smooth\"});", webElem);
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(false);", webElem);
 
     assertTrue(isElementPresent(By.xpath("//li[@class='social__item']")));
 
