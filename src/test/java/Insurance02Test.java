@@ -13,8 +13,8 @@ public class Insurance02Test extends BaseTest {
         driver.get(baseUrl + "/ru/person");
 
         MainPage mainPage = new MainPage(driver);
-        wait.until(ExpectedConditions.elementToBeClickable(mainPage.menuBlock));
-        mainPage.selectMenuItem("Застраховать себя и имущество");
+        wait.until(ExpectedConditions.visibilityOf(mainPage.menuBlock));
+        mainPage.selectMenuItem("Застраховать себя");
 
         driver.findElement(By.linkText("Страхование путешественников")).click();
         assertEquals("Страхование путешественников", mainPage.title.getText());

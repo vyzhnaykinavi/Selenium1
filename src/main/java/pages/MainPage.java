@@ -24,6 +24,6 @@ public class MainPage extends BasePage {
     }
 
     public void selectMenuItem(String itemName) {
-        menuItems.findElement(By.linkText(itemName)).click();
+        menuItems.findElement(By.partialLinkText(itemName)).click();
     }
 }
